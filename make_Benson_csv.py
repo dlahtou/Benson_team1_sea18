@@ -38,8 +38,5 @@ def get_ddate(row):
 df1['DDATE'] = df1.apply(get_ddate, axis=1)
 df1['DWEEKDAY'] = pd.to_datetime(df1['DDATE']).dt.dayofweek
 
-day_markers = np.arange(df1['DATETIME'].min(), df1['DATETIME'].max(), timedelta(days=1))
-day_markers = np.append(day_markers, df1['DATETIME'].max())
-
 df1[:1000].to_csv('~/ds/metis/Benson_team1_sea18/data/BensonData_mini.csv')
 print(df1.head(5))
