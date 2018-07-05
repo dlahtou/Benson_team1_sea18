@@ -10,4 +10,8 @@ for filename in [f for f in listdir(datafolder) if (isfile(join(datafolder, f)) 
     print(input_filepath)
     print(output_filepath)
 
-    #make_Benson_csv(input_filepath, output_filepath)
+    if (isfile(output_filepath)):
+        print("{} already exists! Skipping...".format(output_filepath))
+        continue
+
+    make_Benson_csv(input_filepath, output_filepath)
