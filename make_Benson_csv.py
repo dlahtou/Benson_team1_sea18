@@ -4,6 +4,13 @@ from datetime import datetime, timedelta, time, date
 from os.path import join
 
 def make_Benson_csv(inputfilepath, outputfilepath):
+    """Create a cleaned dataframe using a MTA turnstile file.
+    Additional columns are added for ease of use.
+
+    Keyword arguments:
+    inputfilepath -- the filename of the raw MTA turnstile file
+    outputfilepath -- the save filename for the converted file
+    """
 
     df1 = pd.read_csv(inputfilepath)
     print(df1.head(5))

@@ -1,3 +1,7 @@
+"""
+This script automatically processes any MTA turnstile files added to the data/ folder
+"""
+
 from os import listdir
 from os.path import join, isfile
 from make_Benson_csv import make_Benson_csv
